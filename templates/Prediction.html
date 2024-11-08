@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block link%} 
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/newPrediction.css')}}">
+{% endblock %}
+{% block body %}
+<div class="prediction-text">
+    <p> This customer default on loan : <b>{{results}} </b></p>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+pandas 
+numpy 
+seaborn
+matplotlib
+scikit-learn
+setuptools
+flask
+zenml
+zenml[server]==0.68.1
+pyarrow
+dill
+
+# Use 'zenml up' for viewing the pipeline dashboard in local server

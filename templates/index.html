@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+<h4>Please enter the details of the customer</h4>
+<br>
+<form action="{{ url_for('predict') }}" method="post">
+    <div class="row gx-sm-2 input-options">
+        <div class="col-6 input-section-container">
+            <label for="person_age">Person Age:</label>
+            <input type="number" class="form-control" id="person_age" name="person_age" required><br>
+        </div>
+        <div class="col-6 input-section-container">
+            <label for="person_income">Person Income:</label>
+            <input type="number" class="form-control" id="person_income" name="person_income" required><br>
+        </div>
+    </div>
+    <div class="row gx-sm-2 input-options">
+        <div class="col-6 input-section-container">
+            <label for="person_home_ownership">Person Home Ownership:</label>
+            <input type="text" class="form-control" id="person_home_ownership" name="person_home_ownership" required><br>
+        </div>
+        <div class="col-6 input-section-container">
+            <label for="person_emp_length">Person Employment Length:</label>
+            <input type="number" class="form-control" id="person_emp_length" name="person_emp_length" required><br>
+        </div>
+    </div>
+    <div class="row gx-sm-2 input-options">
+        <div class="col-6 input-section-container">
+            <label for="loan_intent">Loan Intent:</label>
+            <input type="text" class="form-control" id="loan_intent" name="loan_intent" required><br>
+        </div>
+        <div class="col-6 input-section-container">
+            <label for="loan_grade">Loan Grade:</label>
+            <input type="text" class="form-control" id="loan_grade" name="loan_grade" required><br>
+        </div>
+    </div>
+    <div class="row gx-sm-2 input-options">
+        <div class="col-6 input-section-container">
+            <label for="loan_amnt">Loan Amount:</label>
+            <input type="number" class="form-control" id="loan_amnt" name="loan_amnt" required><br>
+        </div>
+        <div class="col-6 input-section-container">
+            <label for="loan_int_rate">Loan Interest Rate:</label>
+            <input type="number" step="0.01" class="form-control" id="loan_int_rate" name="loan_int_rate" required><br>
+        </div>
+    </div>
+    <div class="row gx-sm-2 input-options">
+        <div class="col-6 input-section-container">
+            <label for="loan_percent_income">Loan Percent Income:</label>
+            <input type="number" step="0.01" class="form-control" id="loan_percent_income" name="loan_percent_income" required><br>
+        </div>
+        <div class="col-6 input-section-container">
+            <label for="cb_person_default_on_file">Credit Bureau Default On File:</label>
+            <input type="text" class="form-control" id="cb_person_default_on_file" name="cb_person_default_on_file" required><br>
+        </div>
+    </div>
+    <div class="row gx-sm-2 input-options">
+        <div class="col-6 input-section-container">
+            <label for="cb_person_cred_hist_length">Credit Bureau Credit History Length:</label>
+            <input type="number" class="form-control" id="cb_person_cred_hist_length" name="cb_person_cred_hist_length" required><br>
+        </div>
+    </div>
+    <div class="button-div">
+        <button type="submit" class="button-class">Predict</button>
+    </div>
+</form>
+<div>
+{% endblock %}
